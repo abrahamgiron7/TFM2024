@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}Piloto TFM Abraham{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for( "static", filename="styles.css" ) }}">
+
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('home') }}" id="PredecirNAV" onclick="Select_P()">Predecir
+            resultados</a>
+        <a href="{{ url_for('enternew') }}" id="AnadirNAV" onclick="Select_A()">Añadir nuevo
+            registro</a>
+        <a href="{{ url_for('list') }}" id="ConsultarNAV" onclick="Select_C()">Consultar y editar
+            datos registrados</a>
+    </div>
+    <script>
+        a = document.getElementById("PredecirNAV");
+        b = document.getElementById("AnadirNAV");
+        c = document.getElementById("ConsultarNAV");
+
+        a.classList.remove("navbar-item");
+        a.classList.add("navbar-active");
+
+        b.classList.add("navbar-item");
+        c.classList.add("navbar-item");
+    </script>
+
+    <div class="body-content">
+        {% block content %}
+        {% endblock %}
+        <hr />
+        <footer>
+            <div class="Logo">
+                <p><img src="{{ url_for('static', filename='logo.png')}}" width="140" height="80">&copy;
+                    TFM -
+                    2024</p>
+                <!--             </div>
+            <div class="URL">
+                <p>Consulta el repositorio con el código en: <a href="http://github.com/smoqadam/PyFladesk">Repositorio
+                        de Github del proyecto</a></p>
+            </div> -->
+        </footer>
+    </div>
+</body>
+
+</html>
