@@ -1,0 +1,12 @@
+*Esto es una prueba del código a añadir al html de la plantilla
+
+{% for post in posts %}
+<a href="#">
+    <h2>{{ post['title'] }}</h2>
+</a>
+<span class="badge badge-primary">{{ post['created'] }}</span>
+<hr>
+{% endfor %}
+
+*Esto es para ir a rutas anteriores de carpetas:
+<!--<script src="../JavaScript/JS.js"></script>-->
