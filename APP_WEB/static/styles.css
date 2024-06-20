@@ -1,0 +1,238 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(199, 234, 248);
+    font-family: "lato", sans-serif;
+}
+
+/* .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+} */
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: lightslategray;
+    font-size: 1em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    padding: 8px 5px 8px 5px;
+    cursor: pointer;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.2em; 
+    margin-left: 30px;
+    font-weight: 600; 
+    /* border-bottom: 3px solid red; */
+}
+
+.navbar-item:hover {
+    background-color: #3664c0;
+    transform: translateY(-2px);
+}
+
+.navbar-active:hover {
+    background-color: #3664c0;
+    transform: translateY(-2px);
+}
+
+.navbar-active {
+    border-bottom: 3px solid #3664c0;
+}
+
+
+.body-content {
+    padding: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#Alta {
+    /* height: 80vh; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#Predecir {
+
+    /* height: 80vh; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#Consulta {
+/*     height: 80vh;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -50%); */
+    margin-top: 0.25%;
+}
+
+footer {
+
+    /* height: 80vh; */
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.Logo {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+/* .URL {
+
+    font-weight:600;
+    font-size: 20px;
+} */
+
+/* #Cabecera{
+    color: red;
+    font-weight: bold;
+    text-align: center;
+} */
+
+table {
+    font-size: 30px;
+}
+
+.form {
+    background-color: white;
+    width: 400px;
+    border-radius: 8px;
+    padding: 20px 40px;
+    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+}
+
+.title {
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+.inputContainer {
+    position: relative;
+    height: 45px;
+    width: 90%;
+    margin-bottom: 17px;
+}
+
+/* Style the inputs */
+
+.input {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #DADCE0;
+    border-radius: 7px;
+    font-size: 16px;
+    padding: 0 20px;
+    outline: none;
+    background: none;
+    z-index: 1;
+}
+
+/* Hide the placeholder texts (a) */
+
+::placeholder {
+    color: transparent;
+}
+
+/* Styling text labels */
+
+.label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 0 4px;
+    background-color: white;
+    color: #DADCE0;
+    font-size: 16px;
+    transition: 0.5s;
+    z-index: 0;
+}
+
+.submitBtn {
+    display: block;
+    margin-left: auto;
+    padding: 15px 30px;
+    border: none;
+    background-color: rgb(96, 161, 226);
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+/* .consBtn {
+    display: flex; */
+/* margin-left: auto; */
+/*    padding: 15px 30px;
+    border: none;
+    background-color: purple;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 5px;
+} */
+
+.submitBtn:hover {
+    background-color: #3664c0;
+    transform: translateY(-2px);
+}
+
+.input:focus+.label {
+    top: -7px;
+    left: 3px;
+    z-index: 10;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(86, 130, 210);
+}
+
+.input:focus {
+    border: 2px solid #3664c0;
+}
+
+.input:not(:placeholder-shown)+.label {
+    top: -7px;
+    left: 3px;
+    z-index: 10;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+table{
+    width: 100%;
+    border-color: black;
+    text-align: center;
+    border-spacing: 0cap;
+    background-color: aliceblue;
+    font-size: 20px;
+}
+
+.cabeceraTAB {
+    background-color: rgb(96, 161, 226);
+    border-color: black;
+}
