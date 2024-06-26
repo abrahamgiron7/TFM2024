@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block title %}
+Alta datos entrenamiento
+{% endblock %}
+{% block content %}
+<script>
+function showAlert(message) {
+    alert(message);
+}
+</script>
+<div data-content id="Alta" class="active">
+    <form action="{{ url_for('addrec') }}" class="form" method="POST" enctype="multipart/form-data">
+        <h1 class="title">Carga de datos de los alumnos</h1>
+        <label for="csvFile">Seleccione un archivo CSV:</label>
+        <input type="file" id="csvFile" name="csvFile" accept=".csv" />
+        <br /><br />
+        <input type="submit" value="Cargar CSV" />
+    </form>
+</div>
+<script>
+    //Cambia el menú seleccionado
+    a = document.getElementById("PredecirNAV");
+    b = document.getElementById("AnadirNAV");
+    c = document.getElementById("ConsultarNAV");
+    d = document.getElementById("EntrenarNAV");
+
+    a.classList.remove("navbar-active");
+    b.classList.remove("navbar-item");
+    b.classList.add("navbar-active");
+
+
+    a.classList.add("navbar-item");
+    c.classList.add("navbar-item");
+    d.classList.add("navbar-item");
+    
+    document.getElementById('csvForm').onsubmit = async function(event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+            try {
+                const response = await fetch('/addrec', {
+                    method: 'POST',
+                    body: formData
+                });
+                const result = await response.json();
+                showAlert(result.message);
+            } catch (error) {
+                showAlert('Error al cargar el archivo. Inténtelo de nuevo.');
+            }
+        };
+
+</script>
+{% endblock %}

@@ -1,0 +1,167 @@
+{% extends "layout.html" %}
+{% block title %}
+Base de datos cargada para train
+{% endblock %}
+{% block content %}
+<div id="Consulta">
+    <table border="1px">
+        <thead class="cabeceraTAB">
+            <th><strong>ID</strong></th>
+            <th><strong>A_FECHA_NAC</strong></th>
+            <th><strong>A_PAIS</strong></th>
+            <th><strong>A_IDIOMA_NVL</strong></th>
+            <th><strong>P_PAIS</strong></th>
+            <th><strong>M_PAIS</strong></th>
+            <th><strong>P_EDAD</strong></th>
+            <th><strong>M_EDAD</strong></th>
+            <th><strong>P_TRABAJO</strong></th>
+            <th><strong>M_TRABAJO</strong></th>
+            <th><strong>P_ESTUDIOS</strong></th>
+            <th><strong>M_ESTUDIOS</strong></th>
+            <th><strong>VEHICULOS_FAMILIA</strong></th>
+            <th><strong>A_HERMANOS</strong></th>
+            <th><strong>A_RESIDENCIA</strong></th>
+            <th><strong>FAMILIARES_RESIDENCIA</strong></th>
+            <th><strong>1ESO_C_1EV</strong></th>
+            <th><strong>1ESO_C_2EV</strong></th>
+            <th><strong>1ESO_C_EVF</strong></th>
+            <th><strong>1ESO_EF_1EV</strong></th>
+            <th><strong>1ESO_EF_2EV</strong></th>
+            <th><strong>1ESO_EF_EVF</strong></th>
+            <th><strong>1ESO_I_1EV</strong></th>
+            <th><strong>1ESO_I_2EV</strong></th>
+            <th><strong>1ESO_I_EVF</strong></th>
+            <th><strong>1ESO_M_1EV</strong></th>
+            <th><strong>1ESO_M_2EV</strong></th>
+            <th><strong>1ESO_M_EVF</strong></th>
+            <th><strong>1ESO_MEDIA_1EV</strong></th>
+            <th><strong>1ESO_MEDIA_2EV</strong></th>
+            <th><strong>1ESO_MEDIA_EVF</strong></th>
+            <th><strong>2ESO_C_1EV</strong></th>
+            <th><strong>2ESO_C_2EV</strong></th>
+            <th><strong>2ESO_C_EVF</strong></th>
+            <th><strong>2ESO_EF_1EV</strong></th>
+            <th><strong>2ESO_EF_2EV</strong></th>
+            <th><strong>2ESO_EF_EVF</strong></th>
+            <th><strong>2ESO_I_1EV</strong></th>
+            <th><strong>2ESO_I_2EV</strong></th>
+            <th><strong>2ESO_I_EVF</strong></th>
+            <th><strong>2ESO_M_1EV</strong></th>
+            <th><strong>2ESO_M_2EV</strong></th>
+            <th><strong>2ESO_M_EVF</strong></th>
+            <th><strong>2ESO_MEDIA_1EV</strong></th>
+            <th><strong>2ESO_MEDIA_2EV</strong></th>
+            <th><strong>2ESO_MEDIA_EVF</strong></th>
+            <th><strong>1FPB_MEDIA_1EV</strong></th>
+            <th><strong>1FPB_MEDIA_2EV</strong></th>
+            <th><strong>1FPB_MEDIA_EVF</strong></th>
+            <th><strong>1FPB_P_1EV</strong></th>
+            <th><strong>1FPB_P_2EV</strong></th>
+            <th><strong>1FPB_P_EVF</strong></th>
+            <th><strong>1FPB_CA_1EV</strong></th>
+            <th><strong>1FPB_CA_2EV</strong></th>
+            <th><strong>1FPB_CA_EVF</strong></th>
+            <th><strong>1FPB_CS_1EV</strong></th>
+            <th><strong>1FPB_CS_2EV</strong></th>
+            <th><strong>1FPB_CS_EVF</strong></th>
+            <th><strong>REP_1ESO</strong></th>
+            <th><strong>REP_2ESO</strong></th>
+            <th><strong>REP_1FPB</strong></th>
+            <th><strong>REC_1EV</strong></th>
+            <th><strong>REC_2EV</strong></th>
+            <th><strong>REC_EVEX</strong></th>
+            <th><strong>PROMOCIONA</strong></th>
+        </thead>
+
+        {% for row in rows %}
+        <tr>
+            <td>{{ row["ID"] }}</td>
+            <td>{{ row["A_FECHA_NAC"] }}</td>
+            <td>{{ row["A_PAIS"] }}</td>
+            <td>{{ row["A_IDIOMA_NVL"] }}</td>
+            <td>{{ row["P_PAIS"] }}</td>
+            <td>{{ row["M_PAIS"] }}</td>
+            <td>{{ row["P_EDAD"] }}</td>
+            <td>{{ row["M_EDAD"] }}</td>
+            <td>{{ row["P_TRABAJO"] }}</td>
+            <td>{{ row["M_TRABAJO"] }}</td>
+            <td>{{ row["P_ESTUDIOS"] }}</td>
+            <td>{{ row["M_ESTUDIOS"] }}</td>
+            <td>{{ row["VEHICULOS_FAMILIA"] }}</td>
+            <td>{{ row["A_HERMANOS"] }}</td>
+            <td>{{ row["A_RESIDENCIA"] }}</td>
+            <td>{{ row["FAMILIARES_RESIDENCIA"] }}</td>
+            <td>{{ row["ESO1_C_1EV"] }}</td>
+            <td>{{ row["ESO1_C_2EV"] }}</td>
+            <td>{{ row["ESO1_C_EVF"] }}</td>
+            <td>{{ row["ESO1_EF_1EV"] }}</td>
+            <td>{{ row["ESO1_EF_2EV"] }}</td>
+            <td>{{ row["ESO1_EF_EVF"] }}</td>
+            <td>{{ row["ESO1_I_1EV"] }}</td>
+            <td>{{ row["ESO1_I_2EV"] }}</td>
+            <td>{{ row["ESO1_I_EVF"] }}</td>
+            <td>{{ row["ESO1_M_1EV"] }}</td>
+            <td>{{ row["ESO1_M_2EV"] }}</td>
+            <td>{{ row["ESO1_M_EVF"] }}</td>
+            <td>{{ row["ESO1_MEDIA_1EV"] }}</td>
+            <td>{{ row["ESO1_MEDIA_2EV"] }}</td>
+            <td>{{ row["ESO1_MEDIA_EVF"] }}</td>
+            <td>{{ row["ESO2_C_1EV"] }}</td>
+            <td>{{ row["ESO2_C_2EV"] }}</td>
+            <td>{{ row["ESO2_C_EVF"] }}</td>
+            <td>{{ row["ESO2_EF_1EV"] }}</td>
+            <td>{{ row["ESO2_EF_2EV"] }}</td>
+            <td>{{ row["ESO2_EF_EVF"] }}</td>
+            <td>{{ row["ESO2_I_1EV"] }}</td>
+            <td>{{ row["ESO2_I_2EV"] }}</td>
+            <td>{{ row["ESO2_I_EVF"] }}</td>
+            <td>{{ row["ESO2_M_1EV"] }}</td>
+            <td>{{ row["ESO2_M_2EV"] }}</td>
+            <td>{{ row["ESO2_M_EVF"] }}</td>
+            <td>{{ row["ESO2_MEDIA_1EV"] }}</td>
+            <td>{{ row["ESO2_MEDIA_2EV"] }}</td>
+            <td>{{ row["ESO2_MEDIA_EVF"] }}</td>
+            <td>{{ row["FPB1_MEDIA_1EV"] }}</td>
+            <td>{{ row["FPB1_MEDIA_2EV"] }}</td>
+            <td>{{ row["FPB1_MEDIA_EVF"] }}</td>
+            <td>{{ row["FPB1_P_1EV"] }}</td>
+            <td>{{ row["FPB1_P_2EV"] }}</td>
+            <td>{{ row["FPB1_P_EVF"] }}</td>
+            <td>{{ row["FPB1_CA_1EV"] }}</td>
+            <td>{{ row["FPB1_CA_2EV"] }}</td>
+            <td>{{ row["FPB1_CA_EVF"] }}</td>
+            <td>{{ row["FPB1_CS_1EV"] }}</td>
+            <td>{{ row["FPB1_CS_2EV"] }}</td>
+            <td>{{ row["FPB1_CS_EVF"] }}</td>
+            <td>{{ row["REP_1ESO"] }}</td>
+            <td>{{ row["REP_2ESO"] }}</td>
+            <td>{{ row["REP_1FPB"] }}</td>
+            <td>{{ row["REC_1EV"] }}</td>
+            <td>{{ row["REC_2EV"] }}</td>
+            <td>{{ row["REC_EVEX"] }}</td>
+            <td>{{ row["PROMOCIONA"] }}</td>
+            <td>
+                <form onsubmit="return confirm('Are you sure you want to DELETE this Student from the Database?');"
+                    action="{{url_for('delete')}}" method="POST"><input type="hidden" name="id"
+                        value="{{ row['id'] }}"><input type="submit" value="Delete"></form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+<script>
+    //Cambia el menú seleccionado
+    a = document.getElementById("PredecirNAV");
+    b = document.getElementById("AnadirNAV");
+    c = document.getElementById("ConsultarNAV");
+    d = document.getElementById("EntrenarNAV");
+
+    a.classList.remove("navbar-active");
+    c.classList.remove("navbar-item");
+    c.classList.add("navbar-active");
+
+    a.classList.add("navbar-item");
+    b.classList.add("navbar-item");
+    d.classList.add("navbar-item");
+</script>
+{% endblock %}

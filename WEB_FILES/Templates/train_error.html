@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% block title %}
+Entrenar Modelo IA error
+{% endblock %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrenar Modelo IA error</title>
+    <style>
+        .container {
+            text-align: center;
+            margin-bottom: 10px;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 75vh;
+        }
+
+        .info {
+            text-align: center;
+            font-size: 30px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="info">
+            <p>No ha sido posible entrenar el modelo. Revise que los datos están cargados en la Base de Datos</p>
+        </div>
+        </form>
+    </div>
+
+</body>
+<script>
+    //Cambia el menú seleccionado
+    a = document.getElementById("PredecirNAV");
+    b = document.getElementById("AnadirNAV");
+    c = document.getElementById("ConsultarNAV");
+    d = document.getElementById("EntrenarNAV");
+
+    a.classList.remove("navbar-active");
+    d.classList.remove("navbar-item");
+    d.classList.add("navbar-active");
+
+    a.classList.add("navbar-item");
+    b.classList.add("navbar-item");
+    c.classList.add("navbar-item");
+</script>
+</html>
+{% endblock %}

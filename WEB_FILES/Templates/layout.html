@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}Piloto TFM Abraham{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for( "static", filename="styles.css" ) }}">
+
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('home') }}" id="PredecirNAV">Predecir
+            resultados</a>
+        <a href="{{ url_for('enternew') }}" id="AnadirNAV">Cargar datos
+            de entrenamiento</a>
+        <a href="{{ url_for('list') }}" id="ConsultarNAV">Consultar y editar
+            datos de entrenamiento</a>
+        <a href="{{ url_for('train') }}" id="EntrenarNAV">Entrenar modelo
+            </a>
+    </div>
+    <script>
+        a = document.getElementById("PredecirNAV");
+        b = document.getElementById("AnadirNAV");
+        c = document.getElementById("ConsultarNAV");
+        d = document.getElementById("EntrenarNAV");
+
+        a.classList.remove("navbar-item");
+        a.classList.add("navbar-active");
+
+        b.classList.add("navbar-item");
+        c.classList.add("navbar-item");
+        d.classList.add("navbar-item");
+    </script>
+
+    <div class="body-content">
+        {% block content %}
+        {% endblock %}
+        <hr />
+        <footer>
+            <div class="Logo">
+                <p><img src="{{ url_for('static', filename='logo.png')}}" width="140" height="80">&copy;
+                    TFM -
+                    2024</p>
+        </footer>
+    </div>
+</body>
+
+</html>
